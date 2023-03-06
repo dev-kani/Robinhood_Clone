@@ -7,6 +7,7 @@ import "./Stats.css"
 
 const BASE_URL = "https://finnhub.io/api/v1/quote?symbol="
 const KEY_URL = `&token=cg2gug1r01qq9k49c8v0cg2gug1r01qq9k49c8vg`
+// const KEY_URL = `&token=${process.env.REACT_APP_API_KEY}`
 const testData = []
 
 function Stats() {
@@ -36,13 +37,15 @@ function Stats() {
       })
   }
 
-  const getStocksData = (stock) => {
+
+  var getStocksData = (stock) => {
     return axios
       .get(`${BASE_URL}${stock}${KEY_URL}`)
       .catch((error) => {
         console.error("Error", error.message)
       })
   }
+
 
   useEffect(() => {
     const stocksList = [

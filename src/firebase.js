@@ -1,7 +1,7 @@
 import firebase from "firebase"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBcDlB8BW6NUQB0WxXIpb6SPz6YsoTn87M",
+  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
   authDomain: "dev-kani-robinhood-clone.firebaseapp.com",
   projectId: "dev-kani-robinhood-clone",
   storageBucket: "dev-kani-robinhood-clone.appspot.com",
