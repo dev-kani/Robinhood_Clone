@@ -6,8 +6,7 @@ import { db } from "../../firebase"
 import "./Stats.css"
 
 const BASE_URL = "https://finnhub.io/api/v1/quote?symbol="
-const KEY_URL = `&token=cg2gug1r01qq9k49c8v0cg2gug1r01qq9k49c8vg`
-// const KEY_URL = `&token=${process.env.REACT_APP_API_KEY}`
+const KEY_URL = `&token=${import.meta.env.VITE_API_KEY}`
 const testData = []
 
 function Stats() {
